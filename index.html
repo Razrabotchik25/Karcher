@@ -1,86 +1,130 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karcher Tashkent</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Пылесосы Karcher</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
-    header { background: #ffd700; padding: 20px; text-align: center; }
-    header h1 { margin: 0; font-size: 28px; }
-    .container { padding: 20px; max-width: 900px; margin: auto; }
-    .product { background: #fff; padding: 15px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); display: flex; gap: 15px; align-items: center; }
-    .product img { width: 150px; border-radius: 8px; }
-    .product-info { flex: 1; }
-    .product-info h2 { margin: 0 0 10px; font-size: 20px; }
-    .product-info p { margin: 5px 0; font-size: 16px; }
-    footer { text-align: center; padding: 20px; font-size: 14px; color: #777; }
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: #ffcc00;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+    }
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      background: #f2f2f2;
+    }
+
+    .product-content {
+      padding: 15px;
+    }
+
+    .product h2 {
+      font-size: 1.2em;
+      margin: 10px 0 5px;
+    }
+
+    .product p {
+      margin: 5px 0;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5em;
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Каталог товаров Karcher — Ташкент</h1>
-  </header>
-  <div class="container">
+
+<header>
+  <h1>Пылесосы Karcher</h1>
+</header>
+
+<div class="container">
+  <div class="products">
     <div class="product">
-      <img src="https://via.placeholder.com/150" alt="Karcher K2 Basic">
-      <div class="product-info">
-        <h2>Karcher K2 Basic</h2>
-        <p>Мойка высокого давления для дома</p>
-        <p><strong>Цена:</strong> 1 200 000 сум</p>
+      <img src="https://cdn.technodom.kz/unsafe/640x640/filters:quality(75):no_upscale()/https://technodom.kz/media/catalog/product/2/6/260454_1.jpg" alt="Karcher VC 3">
+      <div class="product-content">
+        <h2>Karcher VC 3</h2>
+        <p><strong>Цена:</strong> 5 499 ₽</p>
+        <p>Компактный пылесос с циклонной технологией и HEPA-фильтром. Подходит для ежедневной уборки.</p>
       </div>
     </div>
     <div class="product">
-      <img src="https://via.placeholder.com/150" alt="Karcher WD 3">
-      <div class="product-info">
+      <img src="https://object.pscloud.io/cms/cms/Photo/img_0_62_2157_2_1.jpg" alt="Karcher WD 2">
+      <div class="product-content">
+        <h2>Karcher WD 2</h2>
+        <p><strong>Цена:</strong> 5 899 ₽</p>
+        <p>Мощный пылесос для сухой и влажной уборки с большим баком и высокой производительностью.</p>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/81Zk0UdzZXL._AC_SL1500_.jpg" alt="Karcher WD 3">
+      <div class="product-content">
         <h2>Karcher WD 3</h2>
-        <p>Пылесос для сухой и влажной уборки</p>
-        <p><strong>Цена:</strong> 1 550 000 сум</p>
-      </div>
-    </div>
-    <div class="product">
-      <img src="https://via.placeholder.com/150" alt="Karcher FC 5">
-      <div class="product-info">
-        <h2>Karcher FC 5</h2>
-        <p>Поломоечная машина для дома</p>
-        <p><strong>Цена:</strong> 2 800 000 сум</p>
+        <p><strong>Цена:</strong> 7 499 ₽</p>
+        <p>Универсальный пылесос с функцией выдува, 15-литровым контейнером и мощным всасыванием.</p>
       </div>
     </div>
   </div>
-  <footer>
-    Связь: +998 90 000 00 00 | Instagram: @karcher_tashkent
-  </footer>
+</div>
+
+<footer>
+  <p>Свяжитесь с нами: +998 90 812 34 58</p>
+</footer>
+
 </body>
 </html>
-
-<!DOCTYPE html><html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Karcher Товары</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
-    body { background: #f9f9f9; color: #222; padding: 20px; }
-    header { text-align: center; margin-bottom: 40px; }
-    header h1 { font-size: 2em; color: #000; }
-    .catalog { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-    .item { background: #fff; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); padding: 16px; transition: transform 0.2s; }
-    .item:hover { transform: translateY(-5px); }
-    .item img { width: 100%; border-radius: 8px; margin-bottom: 12px; }
-    .item h3 { font-size: 1.1em; margin-bottom: 8px; }
-    .item p { color: #555; font-size: 0.95em; margin-bottom: 10px; }
-    .price { font-weight: 600; color: #000; margin-bottom: 12px; }
-    .contact { text-align: center; margin-top: 40px; }
-    .contact a { display: inline-block; padding: 12px 24px; background: #ffd100; color: #000; text-decoration: none; border-radius: 8px; font-weight: 600; transition: background 0.3s; }
-    .contact a:hover { background: #e6bc00; }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Товары Karcher в наличии</h1>
-  </header>
-  <section class="catalog">
-    <div class="item">
-      <img src="https://via.placeholder.com/300x200?text=Karcher+1" alt="Товар 1" />
